@@ -2,7 +2,7 @@ import './Navbar.css'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import logo from './images/logo1.jpg'
+import logo from './images/logo2.jpg'
 function Navigation() {
     return (
         <>
@@ -12,7 +12,7 @@ function Navigation() {
                     <img 
                     src={logo}
                     width="150px"
-                    height="100px"
+                    height="65px"
                     />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />

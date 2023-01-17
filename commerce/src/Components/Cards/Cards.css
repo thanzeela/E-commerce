@@ -8,6 +8,16 @@
 .fashion:hover{
     color: black;
 }
+.whole{
+    margin-left: 40%;
+    text-decoration: none;
+    color: black;
+    font-size: xx-large;
+    font-weight: 500;
+}
+.whole:hover{
+    color: black;
+}
 .electronics{
     margin-left: 20%;
     text-decoration: none;

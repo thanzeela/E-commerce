@@ -16,9 +16,13 @@ function Products() {
             .then(res => res.json())
 
             .then((realData) => {
-                setData(realData.products);
-                console.log(realData)
-
+                    for(const key in realData.products){
+                        setData(realData.products);
+                        console.log(key.category)
+                        console.log("111",key);
+                    }
+                    
+                    
             })
 
             .catch((err) => {
