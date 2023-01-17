@@ -22,7 +22,7 @@ function Navigation() {
                                 <button className="button" type="submit">Search</button>
                         </form>
                         <Nav className="ms-auto">
-                            <Nav.Link className='link' href="#features">Sign In</Nav.Link>
+                            <Nav.Link className='link' href="/login">Sign In</Nav.Link>
                             <Nav.Link className='nav-links' href="#pricing">Cart</Nav.Link>
                         </Nav>
                         <Nav>

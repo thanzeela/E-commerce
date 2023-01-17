@@ -1,0 +1,22 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "password": "Akshayk@3",
+      "email": "thanzeelaanez3@gmaIl.com",
+      "phoneNo": "9207241267",
+      "userName": "THANZEELAKA",
+      "id": 2
+    },
+    {
+      "password": "Akshayk@35",
+      "email": "thanzeelaanez3@gmaIl.com",
+      "phoneNo": "9207241267",
+      "id": "zwxcfvgbjhn"
+    }
+  ]
+}

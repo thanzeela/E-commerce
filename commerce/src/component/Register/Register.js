@@ -1,22 +1,25 @@
-import React, { useRef, useState } from "react";
-import 'Regsiter.module.css';
+import React, { useState } from "react";
+import './Register.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faEye, 
-  faTimes, 
+import {
+  faEye,
+  faTimes,
   faCheck,
   faEyeSlash,
    } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from "react-router";
 
 const Register = () => {
-  const emailInputRef = useRef();
-  const passwordInputRef = useRef();
-  const userNameInputRef = useRef();
-  const phoneNoInputRef = useRef();
-  
+  const [email, setEmail]= useState();
+  const [password, setPassword] = useState();
+  const [id, setUserName] = useState();
+  const [phoneNo, setPhoneNo] = useState();
   const [show, setShow] = useState(false);
   const [display, setDisplay] = useState(false);
-  
+  const [disabled, setDisabled] = useState(true);
+
+  const navigat=useNavigate();
+
   const valid = (item, v_icon, inv_icon) =>{
     let text = document.querySelector(`#${item}`);
     text.style.opacity = "1";
@@ -38,17 +41,27 @@ const Register = () => {
     let invalid_icon = document.querySelector(`#${item} .${inv_icon}`);
     invalid_icon.style.opacity = "1";
   }
+  const handleEmailInputChange = (e) => {
+        setEmail(e.target.value)
+  }
+  const handleUsernameInputChange = (e) => {
+       setUserName(e.target.value)
+  }
+  const handlePhoneNoInputChange = (e) => {
+       setPhoneNo(e.target.value)
+  }
 
-  const handleInputChange = (event) => {
-    const password = event.target.value;
-    if (password !== "")
+  const handlePasswordInputChange = (event) => {
+      setPassword(event.target.value);
+    if (password !=="")
     {
      setDisplay(true);
     }
     else{
       setDisplay(false)
     }
-    if (password.match(/[A-Z]/) != null) 
+
+    if (password.match(/[A-Z]/) != null)
     {
         valid("capital", "fa-check", "fa-times");
     }
@@ -56,7 +69,7 @@ const Register = () => {
           invalid("capital", "fa-check", "fa-times");
     }
 
-    if (password.match(/[!@#$%^&*]/) != null) 
+    if (password.match(/[!@#$%^&*]/) != null)
     {
         valid("char", "fa-check", "fa-times");
     }
@@ -64,21 +77,23 @@ const Register = () => {
           invalid("char", "fa-check", "fa-times");
     }
 
-    if (password.match(/[0-9]/) != null) 
+    if (password.match(/[0-9]/) != null)
     {
         valid("number", "fa-check", "fa-times");
     }
     else {
           invalid("number", "fa-check", "fa-times");
     }
-    console.log(password.length)
-  if (password.length > 7) 
-  {
-      valid("charamount", "fa-check", "fa-times");
-  }
-  else {
-    invalid("charamount", "fa-check", "fa-times");
-  }
+   
+    if (password.length > 7)
+    {
+        valid("charamount", "fa-check", "fa-times");
+    }
+    else {
+      invalid("charamount", "fa-check", "fa-times");
+    }
+  if((password.match(/[A-Z]/) != null) && (password.match(/[!@#$%^&*]/) != null) &&  (password.match(/[0-9]/) != null) &&  (password.length > 7) )
+    setDisabled(false);
 };
 
   const handleShowHide = () => {
@@ -87,53 +102,68 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Registered Successfully..!!");
+    // console.log(password);
+    // console.log(email);
+    // console.log(phoneNo);
+    // console.log(userName);
+    let values={password,email,phoneNo,id};
+    console.log(values);
+
+    fetch("http://localhost:3000/user",{
+            method:"POST",
+            headers:{'content-type': 'application/json'},
+            body:JSON.stringify(values)
+        }).then((res)=>{
+            alert("Registered Successfully")
+            navigat('/login');
+        }).catch((err)=>{
+            alert("Login fail")
+        });
   }
 
   return (
     <div className="register">
-      <div className="container">
+     <div className="register-box">
+      <div className="register-container">
         <form className="form" onSubmit={handleSubmit}>
-        <div className="control">
-          <label htmlFor='username'>UserName</label>
-          <input type='username'
-            className="username"
-            minlength="11"
+        <div className="register-control">
+          <label htmlFor='id'>UserName</label>
+          <input type='id'
+            className="register-username"
+            minlength="4"
             required 
             placeholder="your name" 
-            ref={userNameInputRef} 
+            onChange={handleUsernameInputChange}
           />
         </div>
-        <div className="control">
+        <div className="register-control">
           <label htmlFor='phoneNo'>PhoneNo</label>
-          <input type='telephone'
-            className="phoneNo"
+          <input type='text'
+            className="register-phoneNo"
             minlength="10"
             maxLength={"10"}
             required 
             placeholder="PhoneNo" 
-            ref={phoneNoInputRef} 
+            onChange={handlePhoneNoInputChange}
           />
         </div>
-        <div className="control">
+        <div className="register-control">
           <label htmlFor='email'>Email</label>
           <input type='email'
-            className="email"
+            className="register-email"
             minlength="11"
             required 
             placeholder="yourname@gmail.com" 
-            ref={emailInputRef} 
+            onChange={handleEmailInputChange}
           />
         </div>
-        <div className="control">
+        <div className="register-control">
           <label htmlFor='password'>Password</label>
-          <input
-            type={show ? "text" : "password" }
-            className="password"
+          <input type={show ? "text" : "password" }
+            className="register-password"
             placeholder="Enter Password"
-            onChange={handleInputChange}
+            onChange={handlePasswordInputChange}
             required
-            ref={passwordInputRef}
             />
              {
           show ? (
@@ -151,9 +181,9 @@ const Register = () => {
           )
          }
         </div>
-        
-         {  display && 
-          <div>
+       
+         {  display &&
+          <div className="register-validation">
               <p id="capital">
               <FontAwesomeIcon className="fa-times icon" icon={faTimes} />
               <FontAwesomeIcon className="fa-check icon" icon={faCheck} />
@@ -176,8 +206,9 @@ const Register = () => {
               </p>
           </div>
          }
-         <button type="submit" className="rgstrbtn">Register</button>
+         <button type="submit" className="rgstrbtn" disabled={disabled}>Register</button>
         </form>
+      </div>
       </div>
     </div>
   );
