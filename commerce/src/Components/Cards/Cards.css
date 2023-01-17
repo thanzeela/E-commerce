@@ -1,0 +1,41 @@
+.fashion{
+    margin-left: 28%;
+    text-decoration: none;
+    color: black;
+    font-size: xx-large;
+    font-weight: 500;
+}
+.fashion:hover{
+    color: black;
+}
+.electronics{
+    margin-left: 20%;
+    text-decoration: none;
+    color: black;
+    font-size: xx-large;
+    font-weight: 500;
+}
+.electronics:hover{
+    color: black;
+}
+.mobiles{
+    margin-left: 28%;
+    text-decoration: none;
+    color: black;
+    font-size: xx-large;
+    font-weight: 500;
+}
+.mobiles:hover{
+    color: black;
+}
+.all{
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: white; */
+}
+.card:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
