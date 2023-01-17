@@ -3,12 +3,12 @@ import Cards from '../../Components/Carousel/Home'
 import Tiles from '../../Components/Cards/Cards'
 import Section from '../../Components/Section/Section'
 import Footer from '../../Components/Footer/Footer'
-import Products from '../../Components/Products/Products'
 import './LandingPage.css'
 
 function Home() {
     return (
         <>
+        <div className='back'>
             <Navigation />
                 <Cards />
             <div className='category'>
@@ -16,6 +16,7 @@ function Home() {
             </div>
             <Section />
             <Footer />
+            </div>
 
         </>
 

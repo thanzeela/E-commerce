@@ -9,19 +9,25 @@ function Tiles() {
 
         <div className='all'>
             <div className='card'>
-            <Card style={{ width: '18rem', backgroundColor: 'white' }}>
+            <Card style={{ width: '16rem', backgroundColor: 'white' }}>
                 <Card.Img variant="top" src={image1} />
-                <Card.Link className="fashion" href="/products">Fashion</Card.Link>
+                <Card.Link className="whole" href="/products">All</Card.Link>
             </Card>
             </div>
             <div className='card'>
-                <Card style={{ width: '18rem', backgroundColor: 'white' }}>
+            <Card style={{ width: '16rem', backgroundColor: 'white' }}>
+                <Card.Img variant="top" src={image1} />
+                <Card.Link className="fashion" href="#">Fashion</Card.Link>
+            </Card>
+            </div>
+            <div className='card'>
+                <Card style={{ width: '16rem', backgroundColor: 'white' }}>
                     <Card.Img variant="top" src={image2} />
                     <Card.Link className="electronics" href="#">Electronics</Card.Link>
                 </Card>
             </div>
             <div className='card'>
-                <Card style={{ width: '18rem', backgroundColor: 'white' }}>
+                <Card style={{ width: '16rem', backgroundColor: 'white' }}>
                     <Card.Img variant="top" src={image3} />
                     <Card.Link className="mobiles" href="#">Mobiles</Card.Link>
                 </Card>

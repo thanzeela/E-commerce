@@ -3,7 +3,9 @@
     margin-bottom : 5%;
 }
 
-body{
-    background-color: rgba(240, 234, 234, 0.467);
-    /* background-color: black; */
+.back{
+    /* background-color: rgba(240, 234, 234, 0.467); */
+    background-color: #242726;
+    
+
 }

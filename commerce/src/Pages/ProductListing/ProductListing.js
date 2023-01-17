@@ -1,7 +1,11 @@
 import Products from '../../Components/Products/Products'
+import './ProductListing.css'
 function ProductListing() {
     return(
-        <Products />
+        <div className='list'>
+             <Products />
+        </div>
+       
 
     );
     
