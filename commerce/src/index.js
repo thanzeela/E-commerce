@@ -1,22 +1,64 @@
-import React from 'react';
+import React, { Children } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Home from './Pages/LandingPage/LandingPage'
-import ProductListing from './Pages/ProductListing/ProductListing'
+import Login1 from './components/Login1/login1'
+// import Card from './components/Cards/Cards'
+// import Carousel from './components/Carousel/carousel'
+import Landingpage from './components/LandingPage/LandingPage'
+import Register from './components/Reg/reg';
+// import Carousel from './components/Carousel/Home'
+import Reg from './components/Reg/reg'
+import Login from './components/Login/login'
+import Cal from './components/cal/cal'
 import reportWebVitals from './reportWebVitals';
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-const routes = createBrowserRouter([
-	
-  {path: "/products", element: <ProductListing/>},
-  {path: "/", element: <Home/>}
+const router =createBrowserRouter([
+  // {
+  //   path:"/",
+  //   element:<Navbar/>,
+  // }, 
+ 
 
+    // children: [
+      {
+        path:"/",
+        element:<Landingpage/>,
+      },
+  
+        {
+          path:"/register",
+          element:<Register/>
+        },
+        {
+          path:"/login",
+          element:<Login/>
+        },
+        
+        {
+          path:"/navbar/cal",
+          element:<Cal/>
+        },
+        {
+          path:'/register',
+          element:<Reg />
+        },
+        {
+          path:'/log',
+          element:<Login1/>
+        },
+      
+    
 
+  
 ]);
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={routes}></RouterProvider>
+    <RouterProvider router = {router}/>
+  
   </React.StrictMode>
 );
 
