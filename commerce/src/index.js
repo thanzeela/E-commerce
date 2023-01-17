@@ -1,15 +1,18 @@
 import React, { Children } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Login1 from './components/Login1/login1'
+
 // import Card from './components/Cards/Cards'
 // import Carousel from './components/Carousel/carousel'
-import Landingpage from './components/LandingPage/LandingPage'
-import Register from './components/Reg/reg';
+import Landingpage from './Pages/LandingPage/LandingPage'
+
 // import Carousel from './components/Carousel/Home'
-import Reg from './components/Reg/reg'
-import Login from './components/Login/login'
-import Cal from './components/cal/cal'
+import Register from './component/Register/Register'
+import Cards from './Components/Carousel/Home'
+import Login from './component/Login/Login'
+// import Login1 from './component/Register/Login';
+
+
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -21,9 +24,17 @@ const router =createBrowserRouter([
  
 
     // children: [
+      // {
+      //   path:"login1",
+      //   element:<Login1/>
+      // },
       {
         path:"/",
         element:<Landingpage/>,
+      },
+      {
+        path:"/ads",
+        element:<Cards/>,
       },
   
         {
@@ -34,19 +45,8 @@ const router =createBrowserRouter([
           path:"/login",
           element:<Login/>
         },
-        
-        {
-          path:"/navbar/cal",
-          element:<Cal/>
-        },
-        {
-          path:'/register',
-          element:<Reg />
-        },
-        {
-          path:'/log',
-          element:<Login1/>
-        },
+    
+      
       
     
 
