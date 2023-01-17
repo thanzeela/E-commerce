@@ -1,0 +1,65 @@
+.container1{
+    background-color: rgb(35, 34, 34);
+    height: 50vh;
+}
+.containers{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5%;
+
+}
+.about a{
+    text-decoration: none;
+    color: white;
+    list-style-type: none;
+}
+.about a:hover{
+    text-decoration: underline;
+}
+.about p{
+    margin-left: 30%;
+}
+.about li{
+    list-style-type: none;
+}
+.about{
+    color: white;
+}
+.policy a{
+    text-decoration: none;
+    color: white;
+    list-style-type: none;
+}
+.policy a:hover{
+    text-decoration: underline;
+}
+.policy li{
+    list-style-type: none;
+}
+.policy{
+    color: white;
+}
+.policy p{
+    margin-left: 25%;
+}
+
+.social a{
+    text-decoration: none;
+    color: white;
+    list-style-type: none;
+}
+.social li{
+    list-style-type: none;
+}
+.social{
+    color: white;
+}
+.social a:hover{
+    text-decoration: underline;
+}
+.social p{
+    margin-left: 30%;
+}
+
+
+

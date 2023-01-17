@@ -1,0 +1,49 @@
+.d-flex{
+    margin-left: 2%;
+}
+
+.button{
+    border-color: rgb(0, 106, 255);
+    border-radius: 12px;
+    background-color: rgb(19, 18, 18);
+    color:rgb(0, 106, 255) ;
+    padding: 5px;
+    height: 40px;
+    margin-top:1% ;
+
+}
+
+.color-nav{
+    background-color: rgb(19, 18, 18);
+}
+
+.nav-links:hover{
+    color:rgb(32, 87, 215)
+}
+.nav-links{
+    margin-left: 10px;
+}
+.link{
+    border-color: rgb(0, 106, 255);
+    border-radius: 12px;
+    background-color: rgb(19, 18, 18);
+    color:rgb(0, 106, 255) ;
+    padding: 8px;
+}
+.link:hover{
+    color: white;
+    background-color:rgb(0, 106, 255) ;
+}
+.search {
+    width: 50vw;
+    border-radius: 26px;
+    border: 1px solid #ada9a9;
+    padding: 1% 6%;
+    margin: 1% 1%;
+    background-image: url(https://www.pngarea.com/pngm/109/1164446_searchicon-png-search-icon-png-download.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    outline: 0;
+    background-position: 12px;
+    background-size: 16px;
+  }

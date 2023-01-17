@@ -1,0 +1,21 @@
+.complete{
+    display: flex;
+    background-color: white;
+    margin-bottom: 5%;
+}
+.left{
+    margin-left: 10%;
+}
+.right{
+   margin-top: 10%;
+}
+.right h1{
+    font-size: 40.4px;
+    font-weight: bold;
+}
+.right p{
+    font-size: 17.6px;
+    font-weight: normal;
+    line-height: 1.84;
+    color: #777777;
+}
