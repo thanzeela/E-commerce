@@ -3,13 +3,15 @@
 }
 
 .button{
-    border-color: rgb(0, 106, 255);
-    border-radius: 12px;
+    border-color: rgb(0, 106, 255); 
+    /* border-radius: 12px; */
     background-color: rgb(19, 18, 18);
     color:rgb(0, 106, 255) ;
     padding: 5px;
-    height: 40px;
+    height: 42px;
+    width: 80px;
     margin-top:1% ;
+    margin-left: -80px;
 
 }
 
@@ -39,7 +41,7 @@
     border-radius: 26px;
     border: 1px solid #ada9a9;
     padding: 1% 6%;
-    margin: 1% 1%;
+    margin: 1%  0 1% 100px;
     background-image: url(https://www.pngarea.com/pngm/109/1164446_searchicon-png-search-icon-png-download.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -47,3 +49,24 @@
     background-position: 12px;
     background-size: 16px;
   }
+  .drop{
+    background-color: rgb(19, 18, 18);
+
+  }
+  .menu{
+    color:rgb(0, 106, 255) ;
+
+  }
+.drops{
+    background-color:rgb(19, 18, 18) ;
+    color:rgb(0, 106, 255);
+    border: none;
+}
+.drops:hover{
+    background-color:rgb(19, 18, 18) ;
+
+}
+.drops:active{
+    background-color:rgb(19, 18, 18) ;
+
+}
