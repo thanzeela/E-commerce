@@ -1,37 +1,40 @@
 import Card from 'react-bootstrap/Card';
 import './Cards.css'
-import image1 from './images/image1.webp'
-import image2 from './images/image5.jpg'
+import {Link} from 'react-router-dom'
+import image1 from './images/image1.jpg'
+import image2 from './images/image2.jpg'
 import image3 from './images/image3.jpg'
+import image4 from './images/image4.jpg'
 
 function Tiles() {
     return (
 
         <div className='all'>
-            <div className='card'>
+            <Link to='/products' className='card'>
             <Card style={{ width: '16rem', backgroundColor: 'white' }}>
-                <Card.Img variant="top" src={image1} />
-                <Card.Link className="whole" href="/products">All</Card.Link>
+                <Card.Img variant="top" src={image4} />
+                <Card.Text className="whole">All</Card.Text>
             </Card>
-            </div>
-            <div className='card'>
-            <Card style={{ width: '16rem', backgroundColor: 'white' }}>
-                <Card.Img variant="top" src={image1} />
-                <Card.Link className="fashion" href="#">Fashion</Card.Link>
+            </Link>
+        
+            <Link to='/women' className='card'>
+            <Card style={{ width: '15rem', backgroundColor: 'white' }}>
+                <Card.Img variant="top" src={image2} />
+                <Card.Text className="fashion" >Womens Fashion</Card.Text>
             </Card>
-            </div>
-            <div className='card'>
+            </Link>
+            <Link to='/men' className='card'>
                 <Card style={{ width: '16rem', backgroundColor: 'white' }}>
-                    <Card.Img variant="top" src={image2} />
-                    <Card.Link className="electronics" href="#">Electronics</Card.Link>
+                    <Card.Img variant="top" src={image1} />
+                    <Card.Text className="electronics">Mens Fashion</Card.Text>
                 </Card>
-            </div>
-            <div className='card'>
+            </Link>
+            <Link to='/smartphones' className='card'>
                 <Card style={{ width: '16rem', backgroundColor: 'white' }}>
                     <Card.Img variant="top" src={image3} />
-                    <Card.Link className="mobiles" href="#">Mobiles</Card.Link>
+                    <Card.Text className="mobiles">Mobiles</Card.Text>
                 </Card>
-            </div>
+                </Link>
 
         </div>
 

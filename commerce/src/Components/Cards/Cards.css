@@ -1,9 +1,9 @@
 .fashion{
-    margin-left: 28%;
+    margin-left: 17%;
     text-decoration: none;
     color: black;
-    font-size: xx-large;
-    font-weight: 500;
+    font-size: x-large;
+    font-weight: 400;
 }
 .fashion:hover{
     color: black;
@@ -12,8 +12,8 @@
     margin-left: 40%;
     text-decoration: none;
     color: black;
-    font-size: xx-large;
-    font-weight: 500;
+    font-size: x-large;
+    font-weight: 400;
 }
 .whole:hover{
     color: black;
@@ -22,8 +22,8 @@
     margin-left: 20%;
     text-decoration: none;
     color: black;
-    font-size: xx-large;
-    font-weight: 500;
+    font-size: x-large;
+    font-weight: 400;
 }
 .electronics:hover{
     color: black;
@@ -32,8 +32,8 @@
     margin-left: 28%;
     text-decoration: none;
     color: black;
-    font-size: xx-large;
-    font-weight: 500;
+    font-size: x-large;
+    font-weight: 400;
 }
 .mobiles:hover{
     color: black;
@@ -41,11 +41,13 @@
 .all{
     display: flex;
     justify-content: space-evenly;
-    /* background-color: white; */
+    
 }
 .card:hover{
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
 }
-
+.card{
+    text-decoration: none;
+}

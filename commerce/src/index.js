@@ -1,33 +1,31 @@
 import React, { Children } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import Women from './Pages/ProductListing/WomenProducts'
+import Men from './Pages/ProductListing/MenProduct'
+import Mobile from './Pages/ProductListing/SmartPhones'
+import Home from './Pages/LandingPage/LandingPage'
 
-// import Card from './components/Cards/Cards'
-// import Carousel from './components/Carousel/carousel'
+import App from './App'
+
 import Landingpage from './Pages/LandingPage/LandingPage'
+import Product from './Pages/ProductListing/ProductListing'
+import Cart from './Components/Cart/Cart';
+import ProductDetail from './Components/SingleProduct/ProductDetail';
+import ProductListing from './Pages/ProductListing/ProductListing'
 
-// import Carousel from './components/Carousel/Home'
 import Register from './component/Register/Register'
 import Cards from './Components/Carousel/Home'
-import Login from './component/Login/Login'
+import Login from './component/Login/login'
 // import Login1 from './component/Register/Login';
+import Cart1 from './Components/Cart/Cart1'
 
 
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router =createBrowserRouter([
-  // {
-  //   path:"/",
-  //   element:<Navbar/>,
-  // }, 
- 
-
-    // children: [
-      // {
-      //   path:"login1",
-      //   element:<Login1/>
-      // },
+  
       {
         path:"/",
         element:<Landingpage/>,
@@ -45,6 +43,27 @@ const router =createBrowserRouter([
           path:"/login",
           element:<Login/>
         },
+        {
+          path:"/products",
+          element:<Product/>
+        },
+        {path: "/products", 
+        element: <ProductListing/>},
+        {path: "/", 
+        element: <Home/>},
+  {path: "/women", 
+  element: <Women />},
+  {path: "/smartphones",
+   element: <Mobile />},
+  {path: "/men", 
+  element: <Men />}, 
+  { path:"/products/:id",
+  element:<ProductDetail />},
+  { path:"/cart",
+  element:<Cart1 />},
+          
+
+
     
       
       
@@ -58,7 +77,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <RouterProvider router = {router}/>
-  
+ 
+
+
   </React.StrictMode>
 );
 

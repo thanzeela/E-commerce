@@ -23,7 +23,7 @@ function Loginpage() {
     const navgate = useNavigate();
     const ProceedLogin = (e) => {
         e.preventDefault();
-        fetch("http://localhost:3000/user/" + username).then((res) => {
+        fetch("http://localhost:3000/customer/" + username).then((res) => {
             return res.json();
         }).then((resp) => {
             console.log(resp)
@@ -62,7 +62,7 @@ function Loginpage() {
                         </div>
                         <form onSubmit={ProceedLogin}>
                             <h5 className="fw-normal my-4 pb-3" style={{ letterSpacing: '1px', color: 'white' }}>Sign into your account</h5>
-                            <label style={{ color: 'white' }}>Email</label>
+                            <label style={{ color: 'white' }}>Username</label>
                             <MDBInput wrapperClass='mb-1' type="text"value={username} onChange={e => usernameupdate(e.target.value)}size="lg" />
 
                             <label style={{ color: 'white' }}>Password</label>

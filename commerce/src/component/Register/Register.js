@@ -109,7 +109,7 @@ const Register = () => {
     let values={password,email,phoneNo,id};
     console.log(values);
 
-    fetch("http://localhost:3000/user",{
+    fetch("http://localhost:3000/customer",{
             method:"POST",
             headers:{'content-type': 'application/json'},
             body:JSON.stringify(values)
