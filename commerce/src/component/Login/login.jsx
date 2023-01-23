@@ -43,12 +43,12 @@ function Loginpage() {
 
     }
     return (
-        <MDBContainer fluid className='p-4 background-radial-gradient '>
+        <MDBContainer fluid className='hi'>
             <MDBRow>
                 <MDBCol md='6' className='text-center text-md-start d-flex flex-column justify-content-center' style={{ marginTop: '100px' }}>
 
                     <h1 className="my-5 display-3 fw-bold ls-tight px-3" style={{ color: 'hsl(218, 81%, 95%)', }}>
-                        AXIOS,You deserve <br /><span style={{ color: 'hsl(218, 81%, 75%)' }}>Nothing less</span>
+                        AXIO,You deserve <br /><span style={{ color: 'hsl(218, 81%, 75%)' }}>Nothing less</span>
                     </h1>
                     <p className='px-3' style={{ color: 'hsl(218, 81%, 85%)' }}>
                         Axio, India’s no. 1 online fashion destination justifies its fashion relevance by bringing something new and chic to the table on the daily. Fashion trends seem to change at lightning speed, yet the Axio shopping app has managed to keep up without any hiccups.
@@ -70,7 +70,7 @@ function Loginpage() {
 
 
                             
-                            <button type="submit" className="btn btn-dark btn-lg bt"style={{ width: '360px', marginTop: '15px' }} >Login</button>
+                            <button type="submit" className="clap" >Login</button>
 
                             <p className="mb-{5 pb-lg-2" style={{ color: 'white' }}>Don't have an account? <a href="/register" style={{ color: 'white' }}>Register here</a></p>
                        </form>

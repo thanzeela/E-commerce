@@ -1,22 +1,18 @@
 
-.background-radial-gradient {
-    background-color: hsl(218, 41%, 15%);
-    background-image: radial-gradient(650px circle at 0% 0%,
-        hsl(218, 41%, 35%) 15%,
-        hsl(218, 41%, 30%) 35%,
-        hsl(218, 41%, 20%) 75%,
-        hsl(218, 41%, 19%) 80%,
-        transparent 100%),
-      radial-gradient(1250px circle at 100% 100%,
-        hsl(218, 41%, 45%) 15%,
-        hsl(218, 41%, 30%) 35%,
-        hsl(218, 41%, 20%) 75%,
-        hsl(218, 41%, 19%) 80%,
-        transparent 100%);
-        height:100vh;
+.hi {
+    background-color: #242726;
+    height:100vh;
          
       }
-  
+  .clap{
+    width: 400px;
+    border-radius: 10px;
+    height: 45px;
+    margin-top: 20px;
+    background-color:#bae1ff;
+    font-weight: 500;
+    font-size: 16pt;
+  }
   .bg-glass {
     background-color: hsla(0, 0%, 100%, 0.9) !important;
     backdrop-filter: saturate(200%) blur(25px);
