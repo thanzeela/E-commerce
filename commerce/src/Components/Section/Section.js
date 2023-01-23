@@ -10,12 +10,12 @@ function Section() {
                 src={pic1} />
             </div>
             <div className="right">
-                <h1>
-                    Download Axio App Now
+                <h1 style={{fontSize:"60pt"}}>
+                     Axio 
                 </h1>
-                <p>
-                    Fast, Simple & Delightful.
-                    All it takes is 30 seconds to Download.
+                <p style={{fontSize:"20pt"}}>
+                    Fast, Simple & Delightful.The experience you deserve.
+                   
                 </p>
 
             </div>

@@ -1,6 +1,6 @@
 import './Navbar.css'
 import Container from 'react-bootstrap/Container';
-import Dropdown from 'react-bootstrap/Dropdown';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from './images/logo2.jpg'
@@ -22,19 +22,24 @@ function Navigation() {
                             <input className="search" type="search" placeholder="Search" aria-label="Search" />
                             <button className="button" type="submit">Search</button>
                         </form>
-                        <Nav className="">
-                            <Nav.Link className='nav-links' href="#pricing"><span id="boot-icon" class="bi bi-cart" style={{fontSize: "40px", color: "rgb(31, 98, 255)",opacity: "1",margin:"0 80px 0 80px"}}></span></Nav.Link>
+                        <Nav>
+                            <Nav.Link className='nav-links' href="/cart">
+                                <span id="boot-icon" class="bi bi-cart" style={{ fontSize: "40px", color: "rgb(31, 98, 255) ", opacity: "1", margin: "0 30px 0 90px" }}></span></Nav.Link>
+                            <NavDropdown
+                                menuVariant="dark"
+                                title= {<span id="boot-icon" class="bi bi-person-fill" style={{fontSize: "40px", color: "rgb(31, 98, 255)",opacity: "1"}}>
+                                    
+                                </span>}                             
+                            >      
+                               
+                                <NavDropdown.Item className='dropd' href="/login">Sign In
+                                </NavDropdown.Item>
+                                <NavDropdown.Divider />
+                                <NavDropdown.Item className='dropd' href="/register">
+                                    Register
+                                </NavDropdown.Item>
+                            </NavDropdown>
                         </Nav>
-                        <Dropdown >
-                            <Dropdown.Toggle  className='drops'>
-                            <span id="boot-icon" class="bi bi-person-fill" style={{fontSize: "40px", color: "rgb(31, 98, 255)",opacity: "1"}}></span>
-                            </Dropdown.Toggle>
-
-                            <Dropdown.Menu className='drop'>
-                                <Dropdown.Item className='menu' href='/login'>Sign In</Dropdown.Item>
-                                <Dropdown.Item className='menu' href='/register'>Register</Dropdown.Item>
-                            </Dropdown.Menu>
-                        </Dropdown>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

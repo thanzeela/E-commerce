@@ -53,9 +53,8 @@ function Mobile() {
                                                 </ListGroup.Item>
                                                 <ListGroup.Item className="color">Rating : {item.rating}</ListGroup.Item>
                                             </ListGroup>
-                                            <Card.Body>
-                                                <button type='button' className='buy' href="#">Buy Now</button>
-                                                <button type='button' className='add' href="#">Add to Cart</button>                                    </Card.Body>
+                                            <Card.Body>                                   
+                                                </Card.Body>
                                         </Card>
 
 

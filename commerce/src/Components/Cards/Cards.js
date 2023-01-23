@@ -11,15 +11,15 @@ function Tiles() {
 
         <div className='all'>
             <Link to='/products' className='card'>
-            <Card style={{ width: '16rem', backgroundColor: 'white' }}>
-                <Card.Img variant="top" src={image4} />
+            <Card style={{ width: '16rem', backgroundColor: 'white' }}>                
+                <Card.Img variant="top" src={image4} style={{height:"170px"}} />
                 <Card.Text className="whole">All</Card.Text>
             </Card>
             </Link>
         
             <Link to='/women' className='card'>
-            <Card style={{ width: '15rem', backgroundColor: 'white' }}>
-                <Card.Img variant="top" src={image2} />
+            <Card style={{ width: '16rem', backgroundColor: 'white' }}>
+                <Card.Img variant="top" src={image1} />
                 <Card.Text className="fashion" >Womens Fashion</Card.Text>
             </Card>
             </Link>
@@ -31,7 +31,7 @@ function Tiles() {
             </Link>
             <Link to='/smartphones' className='card'>
                 <Card style={{ width: '16rem', backgroundColor: 'white' }}>
-                    <Card.Img variant="top" src={image3} />
+                    <Card.Img variant="top" src={image2} />
                     <Card.Text className="mobiles">Mobiles</Card.Text>
                 </Card>
                 </Link>

@@ -4,7 +4,8 @@
 
 .button{
     border-color: rgb(0, 106, 255); 
-    /* border-radius: 12px; */
+    border-top-right-radius: 26px;
+    border-bottom-right-radius: 26px;
     background-color: rgb(19, 18, 18);
     color:rgb(0, 106, 255) ;
     padding: 5px;
@@ -13,6 +14,15 @@
     margin-top:1% ;
     margin-left: -80px;
 
+}
+.class{
+    border-color: rgb(0, 106, 255); 
+    border-radius: 26px;
+    background-color: rgb(19, 18, 18);
+    color:rgb(0, 106, 255) ;
+    padding: 5px;
+    height: 42px;
+    width: 80px;
 }
 
 .color-nav{
@@ -49,24 +59,12 @@
     background-position: 12px;
     background-size: 16px;
   }
-  .drop{
-    background-color: rgb(19, 18, 18);
-
-  }
-  .menu{
+.navbar2{
+   margin-left: 500px;
+}
+.dropd{
     color:rgb(0, 106, 255) ;
-
-  }
-.drops{
-    background-color:rgb(19, 18, 18) ;
-    color:rgb(0, 106, 255);
-    border: none;
 }
-.drops:hover{
-    background-color:rgb(19, 18, 18) ;
-
-}
-.drops:active{
-    background-color:rgb(19, 18, 18) ;
-
+.dropd:hover{
+    color: rgb(0, 106, 255);
 }

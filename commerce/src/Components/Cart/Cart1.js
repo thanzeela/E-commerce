@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from "react"
 import Carts from '../../utils/cart.json'
 import { Link } from "react-router-dom";
+import Navigation2 from '../Navbar/Navbar2'
 import {
   MDBBtn,
   MDBCard,
@@ -13,6 +14,7 @@ import {
   MDBRow,
   MDBTypography,
 } from "mdb-react-ui-kit";
+import './Cart.css'
 
 export default function ProductCards() {
     const [data, setData] = useState([]);
@@ -21,12 +23,14 @@ export default function ProductCards() {
     }, []);
     console.log(data)
 return (
-<section className="h-100" style={{ backgroundColor: "#eee" }}>
+  <div className="bucket">
+    <Navigation2 />
+<section className="h-100" >
   <MDBContainer className="py-5 h-100">
     <MDBRow className="justify-content-center align-items-center h-100">
       <MDBCol md="10">
         <div className="d-flex justify-content-between align-items-center mb-4">
-          <MDBTypography tag="h3" className="fw-normal mb-0 text-black">
+          <MDBTypography tag="h3" className="fw-normal mb-0 " style={{color:"rgb(0, 106, 255)"}}>
             Shopping Cart
           </MDBTypography>
           <div>
@@ -79,7 +83,13 @@ return (
         
       </MDBCol>
     </MDBRow>
+    <Link to='/checkout'>
+    <button className="click" type="submit">Proceed to Checkout</button>
+
+    </Link>
+    
   </MDBContainer>
 </section>
+</div>
 );
 }

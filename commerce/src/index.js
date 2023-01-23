@@ -1,24 +1,22 @@
 import React, { Children } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Women from './Pages/ProductListing/WomenProducts'
-import Men from './Pages/ProductListing/MenProduct'
-import Mobile from './Pages/ProductListing/SmartPhones'
-import Home from './Pages/LandingPage/LandingPage'
+import Women from './Pages/ProductListing/WomenProducts';
+import Men from './Pages/ProductListing/MenProduct';
+import Mobile from './Pages/ProductListing/SmartPhones';
+import Home from './Pages/LandingPage/LandingPage';
 
-import App from './App'
-
-import Landingpage from './Pages/LandingPage/LandingPage'
-import Product from './Pages/ProductListing/ProductListing'
+import Landingpage from './Pages/LandingPage/LandingPage';
+import Product from './Pages/ProductListing/ProductListing';
 // import Cart from './Components/Cart/Cart';
 import ProductDetail from './Components/SingleProduct/ProductDetail';
-import ProductListing from './Pages/ProductListing/ProductListing'
+import ProductListing from './Pages/ProductListing/ProductListing';
 
-import Register from './component/Register/Register'
-import Cards from './Components/Carousel/Home'
+import Register from './component/Register/Register';
+import Cards from './Components/Carousel/Home';
 import Login from './component/Login/login'
 // import Login1 from './component/Register/Login';
-import Cart1 from './Components/Cart/Cart1'
+import Cart1 from './Components/Cart/Cart1';
 
 
 import reportWebVitals from './reportWebVitals';

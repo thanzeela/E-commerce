@@ -57,9 +57,7 @@ function Products() {
                                                     <ListGroup.Item className="color">Rating : {item.rating}</ListGroup.Item>
                                                 </ListGroup>
                                                 <Card.Body>
-                                                    <button type='button' className='buy' href="#">Buy Now</button>
-                                                    {/* <Link  type='button' className='add     ' to={`/cart/${item.id}`}>Add to Cart</Link> */}
-                                                    </Card.Body> 
+                                                </Card.Body> 
                                             </Card>
 
 

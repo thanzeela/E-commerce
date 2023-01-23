@@ -127,7 +127,7 @@ const Register = () => {
       <div className="register-container">
         <form className="form" onSubmit={handleSubmit}>
         <div className="register-control">
-          <label htmlFor='id'>UserName</label>
+          <label  htmlFor='id'>UserName</label>
           <input type='id'
             className="register-username"
             minlength="4"
