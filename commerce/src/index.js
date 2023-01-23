@@ -10,7 +10,7 @@ import App from './App'
 
 import Landingpage from './Pages/LandingPage/LandingPage'
 import Product from './Pages/ProductListing/ProductListing'
-import Cart from './Components/Cart/Cart';
+// import Cart from './Components/Cart/Cart';
 import ProductDetail from './Components/SingleProduct/ProductDetail';
 import ProductListing from './Pages/ProductListing/ProductListing'
 
