@@ -1,8 +1,13 @@
 import './Navbar.css'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+<<<<<<< HEAD
 import logo from './images/logo2.jpg';
 import {Link} from 'react-router-dom'
+=======
+import logo from './images/logo2.jpg'
+import { Link } from 'react-router-dom';
+>>>>>>> 7f089456eaa8640617f7b500a037d4f657d135ee
 function Navigation1() {
     return (
         <>
@@ -24,8 +29,13 @@ function Navigation1() {
                         </form>
                         
                     </Navbar.Collapse>
+<<<<<<< HEAD
                     <Link to='/'>                    
                     <button className="class" href='/' type="submit">Logout</button>
+=======
+                    < Link to = '/'>
+                    < button className="button" type="submit">Logout</button>
+>>>>>>> 7f089456eaa8640617f7b500a037d4f657d135ee
                     </Link>
                 </Container>
             </Navbar>

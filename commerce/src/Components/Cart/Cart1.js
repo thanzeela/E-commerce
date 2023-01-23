@@ -1,7 +1,12 @@
 import React,{useState,useEffect} from "react"
 import Carts from '../../utils/cart.json'
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import Navigation2 from '../Navbar/Navbar2'
+=======
+import './Cart.css'
+import { formatPrice } from '../../utils/CurrencyFunction'
+>>>>>>> 7f089456eaa8640617f7b500a037d4f657d135ee
 import {
   MDBBtn,
   MDBCard,
@@ -17,6 +22,17 @@ import {
 import './Cart.css'
 
 export default function ProductCards() {
+
+  const handleDelete = (id) => {
+    if(window.confirm('Do You want to remove?')){
+      fetch("http://localhost:3000/cart/"+ id,{
+        method:'DELETE'
+      }).then((res)=>{
+        alert('Removed Sucessfully')
+        window.location.reload(); 
+      })
+     }
+    }
     const [data, setData] = useState([]);
     useEffect(() => {
         setData(Carts.cart)
@@ -35,10 +51,10 @@ return (
           </MDBTypography>
           <div>
             <p className="mb-0">
-              <span className="text-muted">Sort by:</span>
-              <a href="#!" className="text-body">
+              {/* <span className="text-muted">Sort by:</span> */}
+              {/* <a href="#!" className="text-body">
                 price <i className="fas fa-angle-down mt-1"></i>
-              </a>
+              </a> */}
             </p>
           </div>
         </div>
@@ -62,12 +78,15 @@ return (
                 </MDBCol>
               <MDBCol md="3" lg="2" xl="2" className="offset-lg-1">
                 <MDBTypography tag="h5" className="mb-0">
-                {item.price}
+                {formatPrice(item.price)}
+             
                 </MDBTypography>
               </MDBCol>
               <MDBCol md="1" lg="1" xl="1" className=" " style={{width:'10vw'}}>
-              <Link  className="px-2 btn btn-dark btn-lg ">
-                  Buy Now
+
+              {/* <MDBBtn className="large" onClick={() => handleDelete(item.id)}>Delete</MDBBtn> */}
+              <Link  className="px-2 btn btn-dark btn-lg " onClick={() => handleDelete(item.id)}  >
+                  Delete
                 </Link>
                   
               </MDBCol>
