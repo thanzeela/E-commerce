@@ -1,0 +1,28 @@
+{
+  "user": [
+    {
+      "password": "Akshay@33",
+      "email": "sdfg@sdfghj",
+      "phoneNo": "3456789789",
+      "id": "akshay kumar"
+    },
+    {
+      "password": "Akshay@1234",
+      "email": "sdfg@sdfghj",
+      "phoneNo": "3456789789",
+      "id": "Akshay kumar"
+    },
+    {
+      "password": "Thanzi@123456",
+      "email": "sdfg@sdfghj",
+      "phoneNo": "3456789789",
+      "id": "Thanzeela "
+    },
+    {
+      "password": "Thanzeela@123",
+      "email": "sdfg@sdfghj",
+      "phoneNo": "3456789789",
+      "id": "Thanzeela K A"
+    }
+  ]
+}

@@ -12,6 +12,7 @@ function Home() {
             <Navigation />
                 <Cards />
             <div className='category'>
+                <h1 style={{margin:"10px 0 50px 600px"}}>Categories</h1>
                 <Tiles />
             </div>
             <Section />

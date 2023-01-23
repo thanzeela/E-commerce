@@ -1,28 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { formatPrice } from '../../utils/CurrencyFunction'
 import './Products.css'
 function Products() {
+
     const [data, setData] = useState([]);
     useEffect(() => {
         fetchData();
     }, []);
     const fetchData = () => {
 
-        fetch('https://dummyjson.com/products')
+        fetch('https://dummyjson.com/products?limit=48')
             .then(res => res.json())
 
             .then((realData) => {
-                    for(const key in realData.products){
-                        setData(realData.products);
-                        console.log(key.category)
-                        console.log("111",key);
-                    }
-                    
-                    
+                setData(realData.products);
+
+
             })
 
             .catch((err) => {
@@ -35,38 +33,48 @@ function Products() {
 
     return (
         <>
-             <Row>
-            {data.map((item) => {
-                return (
-                    <Col>
-                    <div className='procard'>
-                       
-                     
-                            <Card style={{ width: '18rem' ,height:'30rem'}}>
-                                <Card.Img variant="top" src={item.thumbnail} />
-                                <Card.Body>
-                                    <Card.Title>{item.title}</Card.Title>
-                                </Card.Body>
-                                <ListGroup className="list-group-flush">
-                                    <ListGroup.Item>Price : {item.price}</ListGroup.Item>
-                                    <ListGroup.Item>Rating : {item.rating}</ListGroup.Item>
-                                </ListGroup>
-                                <Card.Body>
-                                    <Card.Link href="#">Buy Now</Card.Link>
-                                    <Card.Link href="#">Add to Cart </Card.Link>
-                                </Card.Body>
-                            </Card>
-                           
+            <div className='main'>
+                <Row>
+                    <h1 className='title'>All Products</h1>
+                    {data.map((item) => {
+                        return (
+                            
+                                <Col>
+                                <div key={item.id}>
+                                    <div className='procard'>
+                                        <Link to={`/products/${item.id}`} className='single'>
 
-                    
-                             
-                    </div>
-                    </Col>
-                        
 
-                );
-            })}
-        </Row> 
+                                            <Card className="color" style={{ width: '18rem', height: '35rem' }}>
+                                                <Card.Img variant="top" src={item.thumbnail} style={{ height: "250px" }} />
+                                                <Card.Body>
+                                                    <Card.Title style={{ color: "#bae1ff" }}>{item.title}</Card.Title>
+                                                </Card.Body>
+                                                <ListGroup className="color" >
+                                                    <ListGroup.Item className="color">
+                                                        {formatPrice(item.price)}
+                                                    </ListGroup.Item>
+                                                    <ListGroup.Item className="color">Rating : {item.rating}</ListGroup.Item>
+                                                </ListGroup>
+                                                <Card.Body>
+                                                    <button type='button' className='buy' href="#">Buy Now</button>
+                                                    {/* <Link  type='button' className='add     ' to={`/cart/${item.id}`}>Add to Cart</Link> */}
+                                                    </Card.Body> 
+                                            </Card>
+
+
+                                        </Link>
+
+                                    </div>
+                                </div>
+                            </Col>
+
+                         
+                        );
+
+                    })}
+                </Row>
+            </div>
         </>
 
     );

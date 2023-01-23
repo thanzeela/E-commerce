@@ -1,39 +1,43 @@
-.register{
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-  background-image: url();
+.register {
+  min-width: 100vw;;
+ min-height: 100vh;
+ background: url("../../assets/register-background.png");
+ margin: 0;
+ padding: 0;
+ border: 0;
+ outline: 0;
+ box-sizing: border-box;
+ font-family: 'Montserrat', sans-serif;
 }
+
 .register-box{
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   /* background: white; */
-  margin-right: 20%;
 
 }
 
 .register-container{
-  background:rgb(121, 104, 182);
+  /* background:rgb(121, 104, 182); */
   width: 500px;
-  min-height: 200px;
+  min-height: 300px;
   height: fit-content;
   padding: 50px;
   border-radius: 20px;
-  box-shadow: 0 0 20px ;
- 
+  margin-left: 0px;
+  padding-top: 8%;
+  /* margin-top: 20%; */
+  /* box-shadow: 0 0 20px ; */
 }
 
 .register-control label {
   font-weight: bold;
   flex: 1;
-  color: #464646;
+  color: #aeabab;
   margin-bottom: 0.5rem;
-  padding: 0px;
+  padding: 10px;
 }
 
 .register-control input {
@@ -53,8 +57,12 @@
   background: rgb(235, 233, 233);
   font-size: large;
   border: 1.5px solid black;
-
+  /* border: 1.5px; */
+  transition: 4s;
   margin-left: 20px;
+}
+.register-username:focus {
+  box-shadow: 0 0 30px rgb(29, 48, 41);
 }
 
 .register-container .register-phoneNo {
@@ -65,8 +73,13 @@
   background: rgb(235, 233, 233);
   font-size: large;
   border: 1.5px solid black;
+  /* border: 1.5px; */
+  transition: 4s;
   margin-top: 5px;
   margin-left: 30px;
+}
+.register-phoneNo:focus {
+  box-shadow: 0 0 30px rgb(29, 48, 41);
 }
 
 .register-container .register-email {
@@ -77,9 +90,13 @@
   background: rgb(235, 233, 233);
   font-size: large;
   border: 1.5px solid black;
+  /* border: 1.5px; */
   transition: 4s;
   margin-top: 5px;
   margin-left: 60px;
+}
+.register-email:focus {
+  box-shadow: 0 0 30px rgb(29, 48, 41);
 }
 
 .register-container .register-password {
@@ -90,9 +107,10 @@
   background: rgb(235, 233, 233);
   font-size: large;
   border: 1.5px solid black;
+  /* border: 1.5px; */
   transition: 4s;
   margin-top: 5px;
-  margin-left: 50px;
+  margin-left: 26px;
 }
 .register-password:focus {
   box-shadow: 0 0 30px rgb(29, 48, 41);
@@ -106,15 +124,15 @@
 
 .register-container p span{
   font-size: 22px;
-  color: rgb(26, 43, 68);
+  color: rgb(179, 182, 186);
   margin-left: 45px;
 }
 
 .fa-times{
-  opacity: 1;
+  opacity: 0;
 }
 .fa-check{
-  opacity: 0;
+  opacity: 1;
 }
 
 .register-container p .icon{
@@ -124,8 +142,8 @@
   height: 30px;
   font-size: large;
   border-radius: 50%;
-  color: rgb(26, 43, 68);
-  border: 2px solid rgb(26, 43, 68);
+  color: rgb(179, 182, 186);
+  border: 2px solid rgb(133, 139, 149);
 }
 
 .register-container #showhide {
@@ -135,12 +153,22 @@
   cursor: pointer;
 }
 .rgstrbtn{
-    margin-left: 20%;
+    font-size: 18px;
+    margin-left: 40%;
     margin-top:20px;
-    background-color: rgb(73, 60, 121);
+    background-color: rgb(179, 182, 186);
     border-radius: 20px;
-    padding: 0.4rem 1rem 0.4rem 1rem ;
+    padding: 0.6rem 1.2rem 0.6rem 1.2rem ;
+    cursor: pointer;
 }
-.register-validation #char {
-  margin-left: 190px;
+.rgstrbtn:hover{
+  transform: scale(1.01);
+  box-shadow: 0px 2px 5px rgb(41, 39, 39);
+}
+.register-container h1{
+  text-align: center;
+  margin-bottom: 10%;
+  margin-right: 20%;
+  color: rgb(219, 226, 233);
+ 
 }
