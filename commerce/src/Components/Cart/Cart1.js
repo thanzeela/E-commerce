@@ -1,12 +1,10 @@
 import React,{useState,useEffect} from "react"
 import Carts from '../../utils/cart.json'
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
 import Navigation2 from '../Navbar/Navbar2'
-=======
+
 import './Cart.css'
 import { formatPrice } from '../../utils/CurrencyFunction'
->>>>>>> 7f089456eaa8640617f7b500a037d4f657d135ee
 import {
   MDBBtn,
   MDBCard,
