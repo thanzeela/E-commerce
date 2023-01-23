@@ -2,6 +2,7 @@ import './Navbar.css'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from './images/logo2.jpg'
+import { Link } from 'react-router-dom';
 function Navigation1() {
     return (
         <>
@@ -23,7 +24,9 @@ function Navigation1() {
                         </form>
                         
                     </Navbar.Collapse>
-                    <button className="button" type="submit">Logout</button>
+                    < Link to = '/'>
+                    < button className="button" type="submit">Logout</button>
+                    </Link>
                 </Container>
             </Navbar>
             
