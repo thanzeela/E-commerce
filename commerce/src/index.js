@@ -18,6 +18,9 @@ import Cart1 from './Components/Cart/Cart1';
 
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Checkout from './Components/Checkout/Checkout';
+import CheckoutForm from './Components/Checkout/CheckoutForm';
+
 
 const router =createBrowserRouter([
   
@@ -51,6 +54,10 @@ const router =createBrowserRouter([
         element: <ProductListing/>},
         {path: "/", 
         element: <Home/>},
+        {path: "/checkout", 
+        element: <Checkout />},
+        {path: "/checkoutform", 
+        element: <CheckoutForm />},
   {path: "/women", 
   element: <Women />},
   {path: "/smartphones",
