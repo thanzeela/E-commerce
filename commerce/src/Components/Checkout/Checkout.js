@@ -1,5 +1,7 @@
 import React, { useState, useEffect} from "react";
-import Carts from '../../utils/cart.json'
+import Navigation2 from '../Navbar/Navbar2';
+import Carts from '../../utils/cart.json';
+import './Checkout.css'
 import {
   MDBBtn,
   MDBCard,
@@ -31,16 +33,19 @@ import { Link } from "react-router-dom";
     
  
 return (
-<section className="h-100" style={{ backgroundColor: "#eee" }}>
+  <>
+  <Navigation2 />
+ 
+<section className="h-100" style={{ backgroundColor: "#242726"}}>
   <MDBContainer className="py-5 h-100">
-  <MDBCol md="5">
+  <MDBCol md="5" style={{margin:"0 0 0 27%"}}>
         <MDBCard className="mb-5">
           <MDBCardHeader>
             <MDBTypography tag="h5" className="mb-0">
               Products
             </MDBTypography>
           </MDBCardHeader>
-          <MDBCardBody>
+          <MDBCardBody >
             <MDBListGroup flush>
             {data.map((item) => {
                         return (
@@ -48,7 +53,7 @@ return (
               <MDBListGroupItem key={item.id}
                 className="d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                {item.title}
-                <span>{item.price}</span>
+                <span>{formatPrice(item.price)}</span>
               </MDBListGroupItem>
               </div>
                         )})}
@@ -61,17 +66,18 @@ return (
                   </strong>
                 </div>
                 <span>   
-                  <strong>{totalamount}</strong>
+                  <strong>{formatPrice(totalamount)}</strong>
                 </span>
               </MDBListGroupItem>
             </MDBListGroup>
           </MDBCardBody>
         </MDBCard>
         <Link to="/checkoutform">
-        <MDBBtn>Proceed to Pay</MDBBtn>
+        <button className="btn" style={{marginLeft:"200px"}}>Proceed to Pay</button>
         </Link>
       </MDBCol>
   </MDBContainer>
 </section>
+</>
 )}
 export default Checkout;

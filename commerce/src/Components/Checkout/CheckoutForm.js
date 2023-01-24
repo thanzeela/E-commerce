@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import Navigation2 from '../Navbar/Navbar2';
 import './CheckoutForm.css';
 
 const CheckoutForm = () => {
     const [cardDetails, setCardDetails] = useState(false);
     const [upiDetails, setUpiDetails] = useState(false);
     const [netDetails, setNetDetails] = useState(false);
+   
     const handleCard = () => {
         if(cardDetails == false){
             setCardDetails(true);
@@ -42,7 +44,9 @@ const CheckoutForm = () => {
         alert("Payment Successfull..!")
     }
 return (
-<div className="checkoutt">
+    <>
+    <Navigation2 />
+<div className="checkoutt" style={{backgroundColor:'#242726',paddingBottom:"45px"}}>
     <form onSubmit={submitHandler}>  
     <div className="checkout-mainContainer">
         <div className="form-container">
@@ -141,6 +145,7 @@ return (
     </form>
   
 </div>
+</>
 )
 }
 export default CheckoutForm;

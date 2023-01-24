@@ -6,13 +6,16 @@
 
 .form-groups {
   margin-top: 20px;
+
 }
 .checkout-mainContainer{
   display: flex;
+  color:white;
 }
 .form-groups input {
  height: 35px;
  width: 400px;
+
 }
 .address input{
   width: 400px;
@@ -41,10 +44,12 @@
 
 .pincode{
   margin-top: 10px;
+  margin-left: 35px;
 }
 
 .state{
   margin-top: 10px;
+  margin-right: 70px;
 }
 .side-data {
   display: flex;
@@ -60,6 +65,7 @@
   display: inline-block;
   text-align: left;
   width: 200px;
+  margin-left: 30px;
 }
 
 .state select {
@@ -77,6 +83,11 @@
   display: inline-block;
   text-align: right;
   width: 100px;
+  
+}
+.state input{
+  width:150px;
+  height: 35px;
 }
 
 .data-side {
@@ -86,6 +97,7 @@
 .payment {
   display: flex;
   margin-top: 20px;
+  margin-left: 20px;
 }
 
 .payment label {
