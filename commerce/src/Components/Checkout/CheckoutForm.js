@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Navigation2 from '../Navbar/Navbar2';
 import './CheckoutForm.css';
-
+import {useNavigate} from 'react-router-dom';
 const CheckoutForm = () => {
     const [cardDetails, setCardDetails] = useState(false);
     const [upiDetails, setUpiDetails] = useState(false);
     const [netDetails, setNetDetails] = useState(false);
-   
+    const change = useNavigate();
     const handleCard = () => {
         if(cardDetails == false){
             setCardDetails(true);
@@ -42,6 +42,7 @@ const CheckoutForm = () => {
     }
     const submitHandler = () =>{
         alert("Payment Successfull..!")
+        change('/home');
     }
 return (
     <>
