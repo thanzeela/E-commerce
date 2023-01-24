@@ -1,0 +1,124 @@
+/* .checkoutt {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+  } */
+
+  .checkout-mainContainer{
+    display: flex;
+  }
+  
+  .form-container{
+    margin:0 10%;
+    margin-top: 10px;
+    height: fit-content;
+    padding:10px 10px;
+    border:1px solid black;
+    border-radius: 5px;
+    color: rgb(109, 127, 143);
+  }
+
+  .form-groups {
+    margin-top: 10px;
+  }
+  .form-groups input {
+   height: 30px;
+   width: 200px;
+  }
+  .address input{
+    width: 400px;
+    height: 110px;
+  }
+  
+  .address label {
+    display: inline-block;
+    text-align: left;
+    width: 200px;
+  }
+  .form-groups label {
+    display: inline-block;
+    text-align: left;
+    width: 200px;
+  }
+  
+  .side-data {
+    display: flex;
+  }
+  
+  .pincode{
+    margin-top: 10px;
+  }
+  
+  .state{
+    margin-top: 10px;
+  }
+  
+  .pincode input{
+    height: 35px;
+    width: 150px;
+  }
+  
+ 
+  .pincode label {
+    display: inline-block;
+    text-align: left;
+    width: 200px;
+  }
+  
+  .state select {
+    width: 150px;
+    height: 35px;
+    border: 1px solid black;
+  
+  }
+  
+  .state label {
+    display: inline-block;
+    text-align: right;
+    width: 100px;
+  }
+  
+  .data-side {
+    display: flex;
+  }
+  
+  .payment {
+    display: flex;
+  }
+
+  .bttn{
+    padding: .5rem 1rem .5rem 1rem;
+    color: rgb(131, 138, 144);
+    border-radius: 10px;
+    margin:0 30% 2rem;
+  }
+  .bbtn:hover{
+    color: rgb(46, 46, 71);
+  }
+  
+  .form-groups input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+  
+  .form-groups input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+  .pincode input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+  
+  .pincode input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
