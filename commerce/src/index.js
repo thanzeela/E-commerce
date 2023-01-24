@@ -5,17 +5,14 @@ import Women from './Pages/ProductListing/WomenProducts';
 import Men from './Pages/ProductListing/MenProduct';
 import Mobile from './Pages/ProductListing/SmartPhones';
 import Home from './Pages/LandingPage/LandingPage';
-
 import Landingpage from './Pages/LandingPage/LandingPage';
 import Product from './Pages/ProductListing/ProductListing';
-// import Cart from './Components/Cart/Cart';
 import ProductDetail from './Components/SingleProduct/ProductDetail';
 import ProductListing from './Pages/ProductListing/ProductListing';
-
-import Register from './component/Register/Register';
+import Land from './Pages/LandingPage/Home'
+import Register from './Components/Register/Register';
 import Cards from './Components/Carousel/Home';
-import Login from './component/Login/login'
-// import Login1 from './component/Register/Login';
+import Login from './Components/Login/login'
 import Cart1 from './Components/Cart/Cart1';
 
 
@@ -28,6 +25,11 @@ const router =createBrowserRouter([
         path:"/",
         element:<Landingpage/>,
       },
+      {
+        path:"/home",
+        element:<Land/>,
+      },
+      
       {
         path:"/ads",
         element:<Cards/>,

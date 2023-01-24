@@ -9,7 +9,7 @@ import './Home.css'
 function Card() {
     return (
         <>
-            <Carousel className="cards" fade  indicators= {false} autoPlay={true} interval={5000}>
+            <Carousel className="cards" fade  indicators= {false} autoPlay={true} interval={3000}>
                 <Carousel.Item >
                     <img
                         className='d-block w-100'

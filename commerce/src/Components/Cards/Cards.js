@@ -3,7 +3,7 @@ import './Cards.css'
 import {Link} from 'react-router-dom'
 import image1 from './images/image1.jpg'
 import image2 from './images/image2.jpg'
-import image3 from './images/image3.jpg'
+import image5 from './images/image5.jpg'
 import image4 from './images/image4.jpg'
 
 function Tiles() {
@@ -19,7 +19,7 @@ function Tiles() {
         
             <Link to='/women' className='card'>
             <Card style={{ width: '16rem', backgroundColor: 'white' }}>
-                <Card.Img variant="top" src={image1} />
+                <Card.Img variant="top" src={image5} style={{height:"170px"}}/>
                 <Card.Text className="fashion" >Womens Fashion</Card.Text>
             </Card>
             </Link>

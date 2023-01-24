@@ -68,3 +68,26 @@
 .dropd:hover{
     color: rgb(0, 106, 255);
 }
+.user{
+   color:rgb(0, 106, 255) ;
+   font-size: 10pt;
+}
+.search1 {
+    width: 50vw;
+    border-radius: 26px;
+    border: 1px solid #ada9a9;
+    padding: 1% 6%;
+    margin: 1%  0 1% 100px;
+    background-image: url(https://www.pngarea.com/pngm/109/1164446_searchicon-png-search-icon-png-download.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    outline: 0;
+    background-position: 12px;
+    background-size: 16px;
+  }
+  .logout{
+    background-color:transparent;
+    color:rgb(0, 106, 255) ;
+    border: none;
+
+  }

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom";
-import './login.css'
+import '../Login/login.css'
 
 import {
     MDBBtn,
@@ -32,7 +32,11 @@ function Loginpage() {
             } else {
                 if (resp.password === password) {
                     alert('sucessfully login');
-                    navgate('/')
+                    const user=localStorage.setItem('Name',resp.id);
+                    localStorage.setItem('Password',resp.password);
+                    // console.log(localStorage.getItem('Name'))
+                    // console.log(localStorage.getItem('Password'))
+                    navgate('/home')
                 } else {
                     alert("enter valid password")
                 }
