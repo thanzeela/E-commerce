@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import './Register.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+
 import {
   faEye,
   faTimes,
@@ -103,44 +102,20 @@ const Register = () => {
     let values = { password, email, phoneNo, id };
     console.log(values);
 
-    <Modal show={view} onHide={handleClose}>
-    <Modal.Header closeButton>
-      <Modal.Title>Modal heading</Modal.Title>
-    </Modal.Header>
-    <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-    <Modal.Footer>
-      <Button variant="secondary" onClick={handleClose}>
-        Close
-      </Button>
-      <Button variant="primary" onClick={handleClose}>
-        Save Changes
-      </Button>
-    </Modal.Footer>
-  </Modal>
+
   
     fetch("http://localhost:3000/customer", {
       method: "POST",
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(values)
     }).then((res) => {
-      // alert("Registered Successfully")
+      alert("Registered Successfully")
   
       navigat('/login');
     }).catch((err) => {
       alert("Login fail")
     });
   }
-  const [view, setView] = useState(false);
-  const handleClose = () => setView(false);
-  const handleShow = () => setView(true);
-
-
-  
-
-
-
-
-
   return (
     <>
     <div className="register">
@@ -228,7 +203,7 @@ const Register = () => {
               </div>
               
             }
-            <button type="submit" onClick={handleShow} className="rgstrbtn" disabled={disabled}>Register</button>
+            <button type="submit" className="rgstrbtn" disabled={disabled}>Register</button>
           </form>
         </div>
       </div>
@@ -237,6 +212,6 @@ const Register = () => {
   
   </>
   );
-          }
+ }
 
 export default Register;
