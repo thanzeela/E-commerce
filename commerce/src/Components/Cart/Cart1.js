@@ -74,8 +74,6 @@ return (
 
 })}
         
-              
-
         
       </MDBCol>
     </MDBRow>
