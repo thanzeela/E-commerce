@@ -12,9 +12,9 @@ import Product from './Pages/ProductListing/ProductListing';
 import ProductDetail from './Components/SingleProduct/ProductDetail';
 import ProductListing from './Pages/ProductListing/ProductListing';
 
-import Register from './component/Register/Register';
+import Register from './Components/Register/Register';
 import Cards from './Components/Carousel/Home';
-import Login from './component/Login/login'
+import Login from './Components/Login/login';
 // import Login1 from './component/Register/Login';
 import Cart1 from './Components/Cart/Cart1';
 

@@ -1,0 +1,28 @@
+.hi {
+  background-color: #242726;
+  height:100vh;
+       
+    }
+.clap{
+  width: 450px;
+  border-radius: 10px;
+  height: 45px;
+  margin-top: 20px;
+  background-color:#bae1ff;
+  font-weight: 500;
+  font-size: 16pt;
+}
+.bg-glass {
+  background-color: hsla(0, 0%, 100%, 0.9) !important;
+  backdrop-filter: saturate(200%) blur(25px);
+}
+.log{
+position: absolute;
+margin: 10% 0 0 60%;
+width: 30%;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+

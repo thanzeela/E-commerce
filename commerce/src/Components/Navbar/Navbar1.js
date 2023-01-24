@@ -3,8 +3,6 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from './images/logo2.jpg';
 import {Link} from 'react-router-dom'
-import logo from './images/logo2.jpg'
-import { Link } from 'react-router-dom';
 
 function Navigation1() {
     return (
