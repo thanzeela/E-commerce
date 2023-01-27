@@ -67,13 +67,11 @@
       "id": "Manus"
     },
     {
-        "password": "Mursha@123",
+      "password": "Mursha@123",
       "email": "murshad@gmail.com",
       "phoneNo": "9283398243",
       "id": "murshad"
     }
   ],
-  "cart": [
-
-  ]
+  "cart": []
 }

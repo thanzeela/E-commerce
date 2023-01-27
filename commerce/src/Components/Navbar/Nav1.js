@@ -55,7 +55,11 @@ function Nav1() {
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                             <Navbar.Collapse id="responsive-navbar-nav">
                                 <form className="d-flex" role="search">
-                                    <input className="search" type="search" placeholder="Search" onChange={(event) => { setSearch(event.target.value) }} aria-label="Search" />
+                                    <input className="search" type="search" placeholder="Search" onChange={(event) => { 
+                                        setSearch(event.target.value)
+                                        Search()
+                                        }} aria-label="Search" />
+                                    
                                 </form>
                               
 
@@ -142,12 +146,14 @@ function Nav1() {
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                             <Navbar.Collapse id="responsive-navbar-nav">
                                 {/* <button  onClick={()=>history(-1) } style={{border:"none"}}> */}
-                                <i class='fas fa-angle-double-left'  onClick={()=>history(-1) } style={{fontSize:"25px",color:"rgb(32, 87, 215)",backgroundColor:"rgb(19, 18, 18)"}}></i>
 
                                 {/* </button> */}
 
                                 <form className="d-flex" role="search">
-                                    <input className="search" type="search" onChange={(event) => { setSearch(event.target.value) }} placeholder="Search" aria-label="Search" />
+                                    <input className="search" type="search" onChange={(event) => { 
+                                        setSearch(event.target.value) 
+                                        Search()
+                                        }} placeholder="Search" aria-label="Search" />
                                 </form>
                                 {/* <button className = "btn" onClick={()=>history(-1) }>Go back</button> */}
                                 

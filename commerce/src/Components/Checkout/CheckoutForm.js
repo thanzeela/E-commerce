@@ -69,7 +69,7 @@ const CheckoutForm = () => {
 return (
     <>
     <Navigation2 />
-<div className="checkoutt" style={{backgroundColor:'#242726',paddingBottom:"45px"}}>
+<div className="checkoutt" style={{backgroundColor:'#242726',paddingBottom:"45px" , paddingTop:"8rem",minHeight:"100vh"}}>
     <form onSubmit={submitHandler}>  
     <div className="checkout-mainContainer">
         <div className="form-container">
