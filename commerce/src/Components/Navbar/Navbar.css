@@ -27,6 +27,8 @@
 
 .color-nav{
     background-color: rgb(19, 18, 18);
+    position: fixed;
+    width: 100%;
 }
 
 .nav-links:hover{
@@ -69,8 +71,12 @@
     color: rgb(0, 106, 255);
 }
 .user{
-   color:rgb(0, 106, 255) ;
-   font-size: 10pt;
+   /* color:rgb(0, 106, 255) ; */
+   font-size: 12pt;
+   color:white;
+   font-weight: bold;
+   position: static;
+   margin-left: 20px;
 }
 .search1 {
     width: 50vw;

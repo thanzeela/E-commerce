@@ -1,4 +1,5 @@
 import Navigation from '../../Components/Navbar/Navbar'
+import Nav1 from '../../Components/Navbar/Nav1'
 import Cards from '../../Components/Carousel/Home'
 import Tiles from '../../Components/Cards/Cards'
 import Section from '../../Components/Section/Section'
@@ -9,7 +10,7 @@ function Home() {
     return (
         <>
         <div className='back'>
-            <Navigation />
+            <Nav1 />
                 <Cards />
             <div className='category'>
                 <h1 style={{margin:"10px 0 50px 600px"}}>Categories</h1>

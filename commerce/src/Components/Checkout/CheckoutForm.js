@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navigation2 from '../Navbar/Navbar2';
+import Navigation2 from '../Navbar/Nav1';
 import './CheckoutForm.css';
 import {useNavigate} from 'react-router-dom';
 const CheckoutForm = () => {

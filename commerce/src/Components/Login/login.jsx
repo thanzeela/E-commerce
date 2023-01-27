@@ -32,7 +32,7 @@ function Loginpage() {
             } else {
                 if (resp.password === password) {
                     alert('sucessfully login');
-                    const user=localStorage.setItem('Name',resp.id);
+                    const user = localStorage.setItem('Name',resp.id);
                     localStorage.setItem('Password',resp.password);
                     // console.log(localStorage.getItem('Name'))
                     // console.log(localStorage.getItem('Password'))

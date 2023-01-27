@@ -6,7 +6,6 @@ import Men from './Pages/ProductListing/MenProduct';
 import Mobile from './Pages/ProductListing/SmartPhones';
 import Home from './Pages/LandingPage/LandingPage';
 import Landingpage from './Pages/LandingPage/LandingPage';
-import Product from './Pages/ProductListing/ProductListing';
 import ProductDetail from './Components/SingleProduct/ProductDetail';
 import ProductListing from './Pages/ProductListing/ProductListing';
 import Land from './Pages/LandingPage/Home'
@@ -20,7 +19,6 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Checkout from './Components/Checkout/Checkout';
 import CheckoutForm from './Components/Checkout/CheckoutForm';
-
 
 const router =createBrowserRouter([
   
@@ -46,10 +44,6 @@ const router =createBrowserRouter([
           path:"/login",
           element:<Login/>
         },
-        {
-          path:"/products",
-          element:<Product/>
-        },
         {path: "/products", 
         element: <ProductListing/>},
         {path: "/", 
@@ -68,6 +62,7 @@ const router =createBrowserRouter([
   element:<ProductDetail />},
   { path:"/cart",
   element:<Cart1 />},
+  
           
 
 
