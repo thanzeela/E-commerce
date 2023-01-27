@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-import Navigation2 from '../Navbar/Nav1';
-=======
 import React, { useState, useEffect } from "react";
->>>>>>> 3c10dc545758e6e860f3506e5c9dafd9add04b4e
 import './CheckoutForm.css';
 import Carts from '../../utils/cart.json';
 import { formatPrice } from "../../utils/CurrencyFunction";
