@@ -61,14 +61,22 @@
       "id": "Manu"
     },
     {
+<<<<<<< HEAD
       "password": "Manus@1234",
       "email": "Manu@gmail.com",
       "phoneNo": "2345456345",
       "id": "Manus"
+=======
+      "password": "Mursha@123",
+      "email": "murshad@gmail.com",
+      "phoneNo": "9283398243",
+      "id": "murshad"
+>>>>>>> 3c10dc545758e6e860f3506e5c9dafd9add04b4e
     }
   ],
   "cart": [
     {
+<<<<<<< HEAD
       "id": 4,
       "title": "OPPOF19",
       "description": "OPPO F19 is officially announced on April 2021.",
@@ -88,6 +96,8 @@
       ]
     },
     {
+=======
+>>>>>>> 3c10dc545758e6e860f3506e5c9dafd9add04b4e
       "id": 2,
       "title": "iPhone X",
       "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
@@ -104,6 +114,7 @@
         "https://i.dummyjson.com/data/products/2/3.jpg",
         "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
       ]
+<<<<<<< HEAD
     },
     [
       {
@@ -1946,5 +1957,8 @@
         ]
       }
     ]
+=======
+    }
+>>>>>>> 3c10dc545758e6e860f3506e5c9dafd9add04b4e
   ]
 }

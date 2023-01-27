@@ -1,12 +1,34 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import Navigation2 from '../Navbar/Nav1';
+=======
+import React, { useState, useEffect } from "react";
+>>>>>>> 3c10dc545758e6e860f3506e5c9dafd9add04b4e
 import './CheckoutForm.css';
-import {useNavigate} from 'react-router-dom';
+import Carts from '../../utils/cart.json';
+import { formatPrice } from "../../utils/CurrencyFunction";
+import Navigation2 from "../Navbar/Navbar2";
+import { useNavigate } from "react-router-dom";
+
+
+
 const CheckoutForm = () => {
     const [cardDetails, setCardDetails] = useState(false);
     const [upiDetails, setUpiDetails] = useState(false);
     const [netDetails, setNetDetails] = useState(false);
+    const [data, setData] = useState([]);
     const change = useNavigate();
+
+    let totalamount = 0;
+    useEffect(() => {
+        setData(Carts.cart)
+    }, []);
+    
+    data.map((item)=>{
+        //console.log("item " + item.price)
+       totalamount= totalamount+ item.price
+    })
+
     const handleCard = () => {
         if(cardDetails == false){
             setCardDetails(true);
@@ -41,6 +63,11 @@ const CheckoutForm = () => {
        
     }
     const submitHandler = () =>{
+        data.map((item)=>{
+            fetch("http://localhost:3000/cart/"+ item.id,{
+        method:'DELETE'
+      })
+        })
         alert("Payment Successfull..!")
         change('/home');
     }
@@ -51,13 +78,14 @@ return (
     <form onSubmit={submitHandler}>  
     <div className="checkout-mainContainer">
         <div className="form-container">
+            <h2>Shipping Details</h2>
             <div className="form-groups">
                 <label htmlFor="firstname" className="mb-1"><h6 className="mb-0 text-sm" id="lab12">First Name</h6></label>
-                <input id="firstname" className="mb-4" type="text" name="firstname" required></input>
+                <input id="firstname" className="mb-4" type="name" name="firstname" required></input>
             </div>
             <div className="form-groups">
                 <label htmlFor="lastname" className="mb-1"><h6 className="mb-0 text-sm" id="lab12">Last Name</h6></label>
-                <input id="lastname" className="mb-4" type="text" name="lastname" required></input>
+                <input id="lastname" className="mb-4" type="name" name="lastname" required></input>
             </div>
             <div className="form-groups">
                 <label htmlFor="phn" className="mb-1"><h6 className="mb-0 text-sm" id="lab12">Mobile Number</h6></label>
@@ -65,7 +93,7 @@ return (
             </div>
             <div className="address">
                 <label htmlFor="address" className="mb-1"><h6 className="mb-0 text-sm" id="lab12">Address</h6></label>
-                <input id="address" className="address" type="text" name="address" placeholder="enter your full address..." required></input>
+                <input id="address" className="address" type="name" name="address" placeholder="enter your full address..." required></input>
             </div>
             <div className="side-data">
                 <div className="pincode">
@@ -89,7 +117,7 @@ return (
                 <label htmlFor="card">Card</label>
                 <input type="radio" value="option3" name="check" onChange={handleCard}></input>
             </div>
-            {cardDetails &&
+            {cardDetails && 
                 <div>
                     <div className="form-groups">
                         <label htmlFor="cardnum" className="mb-1"><h6 className="mb-0 text-sm" id="lab12">Card Number</h6></label>
@@ -121,19 +149,19 @@ return (
                 <div>
                     <div className="form-groups">
                         <label htmlFor="bank" className="mb-1"><h6 className="mb-0 text-sm" id="lab12">Bank Name</h6></label>
-                        <input id="bank" className="mb-4" type="text" name="bank" placeholder="type here..."></input>
+                        <input id="bank" className="mb-4" type="text" name="bank" placeholder="Bank name..."></input>
                     </div>
                     <div className="form-groups">
                         <label htmlFor="acount" className="mb-1"><h6 className="mb-0 text-sm" id="lab12">Account Number</h6></label>
-                        <input id="acount" className="mb-4" type="number" name="acount" placeholder="type here..."></input>
+                        <input id="acount" className="mb-4" type="number" name="acount" placeholder="Account number..."></input>
                     </div>
                     <div className="form-groups">
                         <label htmlFor="ifsc" className="mb-1"><h6 className="mb-0 text-sm" id="lab12">IFSC</h6></label>
-                        <input id="ifsc" className="mb-4" type="number" name="ifsc" placeholder="type here..."></input>
+                        <input id="ifsc" className="mb-4" type="number" name="ifsc" placeholder="IFSC..."></input>
                     </div>
                     <div className="form-groups">
                         <label htmlFor="branch" className="mb-1"><h6 className="mb-0 text-sm" id="lab12">Branch</h6></label>
-                        <input id="branch" className="mb-4" type="text" name="branch" placeholder="type here..."></input>
+                        <input id="branch" className="mb-4" type="text" name="branch" placeholder="Branch..."></input>
                     </div>
                 </div>
             
@@ -141,7 +169,7 @@ return (
             </div>      
             </div>
             <div className="final-submit">
-                <button classname="btn btn-default btn-checkout" >pay now</button>
+            <button classname="btn btn-default btn-checkout">pay {formatPrice(totalamount)}</button>
             </div>
     </form>
   
